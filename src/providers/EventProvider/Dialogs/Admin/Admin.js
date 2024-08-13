@@ -15,7 +15,7 @@ export default function Admin({ open, setOpen }) {
 
   return (
     <Dialog open={open} onClose={() => setOpen(false)} fullScreen>
-      <Title name={"ADMIN PREVIEW"} classes={classes}/>
+      <Title name={"ADMIN VIEW"} classes={classes}/>
       <DialogContent sx={{ padding: 0 }}>
         <div style={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
           {isSponsoredEvent && (
