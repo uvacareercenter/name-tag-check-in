@@ -103,7 +103,7 @@ export default function CreateEvent({ handleClose }) {
       error = true;
     }
 
-    if (startDate < new Date(new Date()).setHours(0, 0, 0, 0)) {
+    if (startDate < new Date().setHours(0, 0, 0, 0)) {
       addNotification('Start date cannot be earlier than today');
       error = true;
     }

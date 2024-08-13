@@ -100,8 +100,8 @@ const fileUpload = upload.single('csvFile');
         // Creating a new event
         eventRef = collection.insert({
           ...body,
-          startDate: new Date(body.startDate).getTime(),
-          endDate: new Date(body.endDate).getTime(),
+          startDate: new Date(body.startDate).setHours(0, 0, 0, 0),
+          endDate: new Date(body.endDate).setHours(0, 0, 0, 0),
           creationDate: Date.now(),
           filePath: file ? file.path : undefined,
         });
