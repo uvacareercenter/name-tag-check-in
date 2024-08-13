@@ -69,7 +69,7 @@ export default function CreateEvent({ handleClose }) {
   const downloadCSV = async () => {
     try {
       const token = await getAccessTokenSilently();
-      const response = await axios.get('../uploads/event_template.csv', {
+      const response = await axios.get('../api/uploads/event_template.csv', {
         headers: {
           Authorization: `Bearer ${token}`,
         },
