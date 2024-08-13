@@ -22,11 +22,7 @@ Our production HTTPS certificates are issued by Let's Encrypt and managed by cer
 3. cd into the cloned repo
 4. Run `npm install` to install server dependencies. These may already be present from a migration but npm will skip this step if so.
 5. Run `npm run build` to build the frontend (required after any repo changes)
-6. Copy `.env.example` to a new `.env` file and complete with the necessary credentials:
-   1. Auth0 values can be obtained from the admin dashboard (login credentials are on our network drive)
-   2. `HTTPS_KEY_FILE` should be `C:/Certbot/live/uvacc.eservices.virginia.edu/privkey.pem` (or whatever was provided by certbot)
-   3. `HTTPS_CERT_FILE` should be `C:/Certbot/live/uvacc.eservices.virginia.edu/cert.pem`
-   4. `HTTPS_CA_FILE` should be `C:/Certbot/live/uvacc.eservices.virginia.edu/chain.pem`
+6. Copy `.env.example` to a new `.env` file and complete with the necessary credentials
 7. Test by running `npm start` - should start as expected! Control+C to exit.
 
 ## Configure PM2 for Node startup on server boot
