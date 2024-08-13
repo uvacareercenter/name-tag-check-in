@@ -67,9 +67,9 @@ npm start
 
 As soon as a user visits the site, they are required to authenticate. Internally, we have a username and password configured with Auth0 for usage for events.
 
-Afterward, they must pick an event to use for submissions. Any existing events will display on the dialog as well as a form section to create new events. The "Event Name" value will be public-facing, while the "File Name" value will be used internally in the file name for generated CSVs. The "available options" are the different types of fields that users will be able to select when completing the form.
+Afterward, they must pick an event to use for submissions. Any existing events will display on the dialog as well as a form section to create new events. The "Event Name" value will be public-facing and cleansed for later use internally in the file name for generating a CSV. The "available options" are the different types of fields that users will be able to select when completing the form.
 
-Once an event is chosen, the dialog can be closed and the app is ready to be used. Users are required to select at least one type (employer, alumni or parent) with which they identify, after which the appropriate form fields will appear. After clicking submit, a label with their info should print and their data should be sent to our internal server and saved to a CSV file.
+Once an event is chosen, the dialog will be closed and the app is ready to be used. Users are required to select at least one type (employer, alumni or parent) with which they identify, after which the appropriate form fields will appear. After clicking submit, a label with their info should print and their data should be sent to our internal server and saved to a CSV file.
 
 ## API Structure
 
