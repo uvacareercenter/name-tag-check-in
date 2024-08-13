@@ -1,7 +1,7 @@
 {
-  "name": "event-interaction-tracker",
+  "name": "name-tag-check-in",
   "author": "Chris Santamaria <chris@santamaria.me> and Dawson Johnson",
-  "version": "2.5.0",
+  "version": "3.0.0",
   "private": true,
   "dependencies": {
     "@auth0/auth0-react": "^1.12.1",

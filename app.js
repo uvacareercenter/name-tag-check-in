@@ -15,7 +15,7 @@ app.use(helmet());
 const initRoutes = require('./server/routes');
 
 const { version } = require('./package.json');
-console.log(`Event Interaction Tracker v${version}`);
+console.log(`Name Tag Check-In v${version}`);
 
 // Ensuring logs folder exists before proceeding
 fs.stat(path.join(__dirname, 'logs')).catch(() => {
