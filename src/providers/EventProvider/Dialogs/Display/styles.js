@@ -37,7 +37,6 @@ const useStyles = makeStyles({
   item: {
     margin: '1em',
     borderRadius: '1em',
-    width: '492px',
     fontFamily: 'Franklin Gothic',
     overflow: 'hidden'
   },
@@ -47,7 +46,6 @@ const useStyles = makeStyles({
     padding: '1em',
     margin: '1em',
     borderRadius: '1em',
-    width: '492px',
     fontFamily: 'Franklin Gothic',
     overflow: 'hidden'
   },

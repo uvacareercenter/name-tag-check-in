@@ -28,8 +28,9 @@ export const Header = ({ name, classes }) => {
   );
 };
 
-export const EmployerScroller = ({ isCheckedIn, isSponsor, style, data, colors, classes, rows, itemWidth }) => {
+export const EmployerScroller = ({ isCheckedIn, isSponsor, isPortrait, style, data, colors, classes, rows, itemWidth }) => {
   const containerRef = useContainerRef();
+  const scrollCondition = isPortrait ? 2 : 4;
 
   const employerData = data.filter(item => {
     if (isSponsor) {
@@ -50,12 +51,12 @@ export const EmployerScroller = ({ isCheckedIn, isSponsor, style, data, colors, 
         return (
           <div
             key={rowIndex}
-            className={row.length > 2 ? classes.scroll : ''}
+            className={row.length > scrollCondition ? classes.scroll : ''}
             style={rowStyle}
           >
             {isCheckedIn
-              ? (row.length > 2 ? [...row, ...row] : row).map((item, itemIndex) => (
-                <div key={itemIndex} className={classes.item}>
+              ? (row.length > scrollCondition ? [...row, ...row] : row).map((item, itemIndex) => (
+                <div key={itemIndex} className={classes.item} style={{ width: itemWidth }}>
                   <div
                     className={classes.itemName}
                     style={{ backgroundColor: colors[item['Employers Name'] ] }}
@@ -97,8 +98,8 @@ export const EmployerScroller = ({ isCheckedIn, isSponsor, style, data, colors, 
                     </div>
                   </div>
                 </div>
-              )) : (row.length > 2 ? [...row, ...row] : row).map((item, itemIndex) => (
-                <div key={itemIndex} className={classes.itemNotHere}>
+              )) : (row.length > scrollCondition ? [...row, ...row] : row).map((item, itemIndex) => (
+                <div key={itemIndex} className={classes.itemNotHere} style={{ width: itemWidth }}>
                   <div className={classes.imageWrapper}>
                     <img
                       src={item.imageUrl}

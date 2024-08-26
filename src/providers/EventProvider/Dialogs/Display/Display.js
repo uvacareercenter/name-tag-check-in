@@ -19,7 +19,7 @@ export default function Display({ open, setOpen }) {
   const employerSponsorRows = 1;
   const employerCheckedInRows = isSponsoredEvent ? isPortrait ? 4 : 2 : isPortrait ? 5 : 3;
   const employerNotCheckedInRows = isSponsoredEvent ? isPortrait ? 2 : 1 : 2;
-  const itemWidth = 492; // fixed width of each item in px (also in style sheet)
+  const itemWidth = isPortrait ? 492 : 440;
 
   useEffect(() => {
     const imageFilter = display.filter(
@@ -58,9 +58,10 @@ export default function Display({ open, setOpen }) {
               data={display}
               colors={colors}
               isSponsor={true}
-              isCheckedIn={true}
               classes={classes}
+              isCheckedIn={true}
               itemWidth={itemWidth}
+              isPortrait={isPortrait}
               rows={employerSponsorRows}
             />
           </>
@@ -76,6 +77,7 @@ export default function Display({ open, setOpen }) {
           classes={classes}
           isCheckedIn={true}
           itemWidth={itemWidth}
+          isPortrait={isPortrait}
           rows={employerCheckedInRows}
         />
         <Header name={"Not Here"} classes={classes}/>
@@ -87,6 +89,7 @@ export default function Display({ open, setOpen }) {
           data={display}
           classes={classes}
           itemWidth={itemWidth}
+          isPortrait={isPortrait}
           rows={employerNotCheckedInRows}
         />
       </div>
