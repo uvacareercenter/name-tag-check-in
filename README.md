@@ -81,15 +81,15 @@ Once an event is chosen, the dialog will be closed and the app is ready to be us
 
 Display CSV properties:
 
-| Name              | Type     | Description                                                                       |
-|-------------------|----------|-----------------------------------------------------------------------------------|
-| `Employers Name`  | Required | Name of employer, same header as in handshake report                              |
-| `Industries Name` | Optional | Name of industry, same header as in handshake report                              |
-| `Job Positions`   | Optional | Number of job postings available, same header as in handshake report              |
-| `Room Name`       | Optional | Name of the room where employer is located                                        |
-| `Table #`         | Optional | Table number assigned to employer                                                 |
-| `Sponsor`         | Optional | Indicates if the employer is a sponsor of the event (TRUE or FALSE)               |
-| `Checked-in`      | Empty    | Status of the employer’s check-in to the event, managed through code. Leave blank |
+| Name              | Type     | Description                                                                                                       |
+|-------------------|----------|-------------------------------------------------------------------------------------------------------------------|
+| `Employers Name`  | Required | Name of employer, same header as in handshake report                                                              |
+| `Industries Name` | Optional | Name of industry, same header as in handshake report                                                              |
+| `Job Positions`   | Optional | Number of job postings available, same header as in handshake report                                              |
+| `Room Name`       | Optional | Name of the room where employer is located                                                                        |
+| `Table #`         | Optional | Table number assigned to employer                                                                                 |
+| `Sponsor`         | Optional | Indicates whether the employer is a sponsor of the event. Enter TRUE if they are a sponsor; leave blank otherwise |
+| `Checked-in`      | Empty    | Status of the employer’s check-in to the event, managed through code. Leave blank                                 |
 
 ### Admin
 
