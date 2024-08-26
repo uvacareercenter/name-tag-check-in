@@ -1,8 +1,10 @@
 # Event Interaction Tracker
 
-An internal web app for the UVA Career Center to faciliate event registration for Career Center events.
+An internal web app for the UVA Career Center to facilitate event registration for Career Center events.
 
 Uses React, Node.js, Auth0 and the DYMO Label Framework.
+
+<img width="959" alt="image" src="https://github.com/user-attachments/assets/48cb06b2-70ce-4e50-900a-034af6a4d2b6">
 
 ## Docs
 
@@ -70,6 +72,30 @@ As soon as a user visits the site, they are required to authenticate. Internally
 Afterward, they must pick an event to use for submissions. Any existing events will display on the dialog as well as a form section to create new events. The "Event Name" value will be public-facing and cleansed for later use internally in the file name for generating a CSV. The "available options" are the different types of fields that users will be able to select when completing the form.
 
 Once an event is chosen, the dialog will be closed and the app is ready to be used. Users are required to select at least one type (employer, alumni or parent) with which they identify, after which the appropriate form fields will appear. After clicking submit, a label with their info should print and their data should be sent to our internal server and saved to a CSV file.
+
+## Event Dialogs
+
+### Display
+
+<img width="959" alt="image" src="https://github.com/user-attachments/assets/cecc4028-b3e1-419f-9d57-093cb0c258e2">
+
+Display CSV properties:
+
+| Name              | Type     | Description                                                                       |
+|-------------------|----------|-----------------------------------------------------------------------------------|
+| `Employers Name`  | Required | Name of employer, same header as in handshake report                              |
+| `Industries Name` | Optional | Name of industry, same header as in handshake report                              |
+| `Job Positions`   | Optional | Number of job postings available, same header as in handshake report              |
+| `Room Name`       | Optional | Name of the room where employer is located                                        |
+| `Table #`         | Optional | Table number assigned to employer                                                 |
+| `Sponsor`         | Optional | Indicates if the employer is a sponsor of the event (TRUE or FALSE)               |
+| `Checked-in`      | Empty    | Status of the employer’s check-in to the event, managed through code. Leave blank |
+
+### Admin
+
+Displays checked-in employers at a quick glance
+
+<img width="960" alt="image" src="https://github.com/user-attachments/assets/de084c7f-4c9c-4aac-890e-5a816f361aed">
 
 ## API Structure
 
@@ -193,7 +219,7 @@ JSON body properties:
 | `school`   | `string`  | Full UVA school name such as `"College and Graduate School of Arts & Sciences"` |
 | `name`     | `string`  |                                                                                 |
 | `email`    | `string`  |                                                                                 |
-| `company`  | `string`  |                                                                                 |
+| `company`  | `string`  | Name of company (generated select field if display event)                       |
 | `title`    | `string`  | Job position                                                                    |
 | `uvaEmail` | `string`  |                                                                                 |
 | `gradYear` | `string`  | Example: `"2022"`                                                               |
