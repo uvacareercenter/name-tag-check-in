@@ -1,4 +1,4 @@
-# Event Interaction Tracker
+# Name Tag Check In
 
 An internal web app for the UVA Career Center to facilitate event registration for Career Center events.
 
