@@ -19,7 +19,12 @@ export default function Display({ open, setOpen }) {
   const employerSponsorRows = 1;
   const employerCheckedInRows = isSponsoredEvent ? isPortrait ? 4 : 2 : isPortrait ? 5 : 3;
   const employerNotCheckedInRows = isSponsoredEvent ? isPortrait ? 2 : 1 : 2;
-  const itemWidth = isPortrait ? 492 : 440;
+
+  const viewportWidth = window.innerWidth;
+  const padding = 16 * (isPortrait ? 3 : 2.5);
+  const divisor = isPortrait ? 0.5 : 0.25;
+  const fullWidth = viewportWidth * divisor;
+  const itemWidth = fullWidth - padding;
 
   useEffect(() => {
     const imageFilter = display.filter(

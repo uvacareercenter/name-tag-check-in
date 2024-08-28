@@ -95,7 +95,7 @@ const useStyles = makeStyles({
     justifyContent: 'space-evenly',
     padding: 'clamp(0rem, 1vh, 1rem)',
     flexDirection: 'column',
-    fontSize: 'clamp(0rem, 1.6vh, 1.3rem)',
+    fontSize: 'clamp(0rem, 1.6vh, 2vw)',
     textAlign: 'left'
   },
   itemInfoText: {
