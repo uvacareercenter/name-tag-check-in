@@ -43,13 +43,13 @@ export default function FormContent() {
         <TextField
           name="company"
           label="Company"
-          options={{ required: employer || alumni || other }}
+          options={{ required: employer || alumni }}
         />
       )}
       <TextField
         name="title"
         label="Job Title"
-        options={{ required: employer || alumni || other }}
+        options={{ required: employer || alumni }}
       />
       {alumni && (
         <>
