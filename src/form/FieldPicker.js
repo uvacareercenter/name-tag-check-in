@@ -6,6 +6,7 @@ const fieldTypes = [
   { name: 'employer', label: 'Employer' },
   { name: 'alumni', label: 'Alumni' },
   { name: 'parent', label: 'Parent' },
+  { name: 'other', label: 'Other' },
 ];
 
 export default function FieldPicker() {
