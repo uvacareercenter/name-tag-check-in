@@ -43,7 +43,7 @@ export default function Form() {
     if (event.fields.includes('nameTags')) {
       if (data.alumni) {
         print(data.name, data.company, `Class of ${data.gradYear}`);
-      } else if (data.employer) {
+      } else if (data.employer || data.other) {
         print(data.name, data.company, data.title);
       } else {
         print(data.name);
