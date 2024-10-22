@@ -11,6 +11,7 @@ const csvFields = [
   { label: 'Employer', value: 'employer' },
   { label: 'Alumni', value: 'alumni' },
   { label: 'Parent', value: 'parent' },
+  { label: 'Other', value: 'other' },
   { label: 'Name', value: 'name' },
   { label: 'Email', value: 'email' },
   { label: 'Company', value: 'company' },

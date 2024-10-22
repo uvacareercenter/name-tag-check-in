@@ -20,6 +20,7 @@ export default function Form() {
       employer: false,
       alumni: false,
       parent: false,
+      other: false,
     },
   });
   const { handleSubmit, reset } = methods;
@@ -32,7 +33,7 @@ export default function Form() {
   }, [event, reset]);
 
   const onSubmit = async (data) => {
-    if (!(data.employer || data.alumni || data.parent)) {
+    if (!(data.employer || data.alumni || data.parent || data.other)) {
       setNotification('Please select at least one attendee type');
       return;
     }

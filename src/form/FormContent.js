@@ -5,7 +5,7 @@ import { useEvent } from '../providers/EventProvider';
 export default function FormContent() {
   const { event, display } = useEvent();
   const { watch } = useFormContext();
-  const [employer, alumni, parent] = watch(['employer', 'alumni', 'parent']);
+  const [employer, alumni, parent, other] = watch(['employer', 'alumni', 'parent', 'other']);
   const schools = [
     'College and Graduate School of Arts & Sciences',
     'School of Architecture',
@@ -22,7 +22,7 @@ export default function FormContent() {
   ]
   const employerNames = display.map(item => item['Employers Name']).filter(name => name.trim() !== '');
 
-  if (!(employer || alumni || parent)) return null;
+  if (!(employer || alumni || parent || other)) return null;
   return (
     <FormColumnSingle>
       <TextField name="name" label="Full Name" options={{ required: true }} />
@@ -32,7 +32,7 @@ export default function FormContent() {
         type="email"
         options={{ required: true }}
       />
-      {event.fields.includes('display') ? (
+      {event.fields.includes('display') && !other ? (
         <SelectField
           name="company"
           label="Company"

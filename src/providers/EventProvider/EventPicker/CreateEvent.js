@@ -14,7 +14,8 @@ import { DatePicker } from '@mui/x-date-pickers';
 const userTypes = [
   { name: 'employer', label: 'Employer' },
   { name: 'alumni', label: 'Alumni' },
-  { name: 'parent', label: 'Parent' }
+  { name: 'parent', label: 'Parent' },
+  { name: 'other', label: 'Other' },
 ];
 
 const eventFeatures = [
@@ -53,6 +54,7 @@ export default function CreateEvent({ handleClose }) {
         employer: true,
         alumni: true,
         parent: false,
+        other: true,
         nameTags: true,
         display: false
       },
@@ -98,7 +100,7 @@ export default function CreateEvent({ handleClose }) {
     let error = false;
     const { fields } = data;
 
-    if (!(fields.employer || fields.alumni || fields.parent)) {
+    if (!(fields.employer || fields.alumni || fields.parent || fields.other)) {
       addNotification('At least one user type must be selected');
       error = true;
     }
