@@ -29,7 +29,7 @@ mkcert -install
 mkcert -cert-file cert.pem -key-file privkey.pem localhost
 ```
 
-Create a `.env` file with the same fields as `.env.example`. All necessary Auth0 info should be obtained from their Application Setttings and API Settings dashboards.
+Create a `.env` file with the same fields as `.env.example`. All necessary Auth0 info should be obtained from their Application Settings and API Settings dashboards.
 
 ## Development Usage
 

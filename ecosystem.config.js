@@ -2,7 +2,7 @@ module.exports = {
   apps: [
     {
       name: 'Event Interaction Tracker',
-      script: 'app.js',
+      script: 'app.ts',
       autorestart: true,
       watch: false,
       max_memory_restart: '500M',
