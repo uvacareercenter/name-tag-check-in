@@ -10,7 +10,7 @@ const routes = (app: Application) => {
   app.use('/api/submission', auth, submissionRouter);
 
   // Static hosting of built React files
-  app.use(express.static(path.join(__dirname, '../dist')));
+  app.use(express.static(path.join(__dirname, '../build')));
 
   app.get('/api/uploads/event_template.csv', auth, (_req: Request, res: Response) => {
     const filePath = path.join(__dirname, '../uploads/event_template.csv');
@@ -19,7 +19,7 @@ const routes = (app: Application) => {
 
   // Catch-all route for serving the React app
   app.get('*', (_req: Request, res: Response) => {
-    res.sendFile(path.join(__dirname, '../dist/index.html'));
+    res.sendFile(path.join(__dirname, '../build/index.html'));
   });
 
   // Error handling for all above routes

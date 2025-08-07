@@ -53,7 +53,7 @@
     "vite": "^7.0.6"
   },
   "scripts": {
-    "start": "node app",
+    "start": "tsx app.ts",
     "dev:server": "cross-env PORT=8080 nodemon --watch app.ts --watch server --exec tsx app.ts",
     "dev:client": "vite",
     "dev": "npm-run-all --parallel dev:client dev:server",
