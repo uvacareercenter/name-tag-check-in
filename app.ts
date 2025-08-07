@@ -19,6 +19,10 @@ app.use(
           "'self'",
           "https://uvacc.auth0.com",
         ],
+        frameSrc: [
+          "'self'",
+          "https://uvacc.auth0.com",
+        ],
         scriptSrc: ["'self'", "'unsafe-inline'"],
         styleSrc: ["'self'", "'unsafe-inline'"],
         imgSrc: ["'self'", "data:", "https:"],
