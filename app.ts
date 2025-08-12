@@ -14,13 +14,8 @@ app.use(
   helmet({
     contentSecurityPolicy: {
       directives: {
-        defaultSrc: ["'self'"],
-        connectSrc: ["'self'", "https://uvacc.auth0.com"],
+        connectSrc: ["'self'", "https://uvacc.auth0.com", "https://127.0.0.1:41951", "https://localhost:41951"],
         frameSrc: ["'self'", "https://uvacc.auth0.com"],
-        scriptSrc: ["'self'", "'unsafe-inline'", "'unsafe-eval'"],
-        styleSrc: ["'self'", "'unsafe-inline'"],
-        imgSrc: ["'self'", "data:", "https:"],
-        fontSrc: ["'self'", "https:", "data:"],
       },
     },
   })
