@@ -15,15 +15,9 @@ app.use(
     contentSecurityPolicy: {
       directives: {
         defaultSrc: ["'self'"],
-        connectSrc: [
-          "'self'",
-          "https://uvacc.auth0.com",
-        ],
-        frameSrc: [
-          "'self'",
-          "https://uvacc.auth0.com",
-        ],
-        scriptSrc: ["'self'", "'unsafe-inline'"],
+        connectSrc: ["'self'", "https://uvacc.auth0.com"],
+        frameSrc: ["'self'", "https://uvacc.auth0.com"],
+        scriptSrc: ["'self'", "'unsafe-inline'", "'unsafe-eval'"],
         styleSrc: ["'self'", "'unsafe-inline'"],
         imgSrc: ["'self'", "data:", "https:"],
         fontSrc: ["'self'", "https:", "data:"],
